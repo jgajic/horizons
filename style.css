@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:300,400&display=swap');
+
+:root {
+  --green: #32b777;
+  --white: #fff;
+  --gray: #555;
+  --lightgray: #ececec;
+  --darkgray: #222;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--gray);
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Comfortaa', cursive;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+/* header */
+
+header {
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.5) url(img/horiznos-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+header .container {
+  width: 65%;
+}
+
+.horizons h2 {
+  padding-top: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome p {
+  margin-bottom: 2rem;
+}
+
+.welcome a {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--green);
+  padding: 0.6rem 2rem;
+  border-radius: 25px;
+}
+
+/* hero */
+
+.hero {
+  text-align: center;
+  background-color: var(--lightgray);
+  padding: 4rem 0;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.pictures {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+/* hero2 */
+
+.hero2 {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.hero2 .container {
+  width: 65%;
+}
+
+.hero2 h2 {
+  font-size: 2rem;
+}
+
+.text {
+  margin-bottom: 2rem;
+}
+
+.integers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.int-1,
+.int-2,
+.int-3,
+.int-4 {
+  flex: 0 0 48%;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.fab {
+  font-size: 4.5rem;
+  color: var(--green);
+}
+
+.integers div {
+  text-align: start;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--darkgray);
+  margin-top: 4rem;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+footer .container {
+  padding-top: 4rem;
+}
+
+footer .container article {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--white);
+}
+
+.heading1 {
+  flex: 0 0 30%;
+}
+
+.heading2 {
+  flex: 0 0 20%;
+}
+
+.heading2 a {
+  color: var(--white);
+}
+
+.address {
+  flex: 0 0 30%;
+}
+
+.last-p {
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+/* Media query */
+
+@media screen and (max-width: 1250px) {
+  header {
+    height: 50vh;
+  }
+
+  .hero2 .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .hero p {
+    font-size: 0.7rem;
+  }
+
+  .hero2 .container {
+    width: 65%;
+  }
+  .hero2 p {
+    font-size: 0.9rem;
+  }
+
+  .integers {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .hero2 p {
+    font-size: 0.7rem;
+  }
+  .hero2 .container {
+    width: 85%;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header nav ul li a {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  header p,
+  a {
+    font-size: 0.7rem;
+  }
+  header .container {
+    width: 90%;
+  }
+
+  .hero .container {
+    width: 70%;
+  }
+
+  .hero {
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .pictures {
+    flex-direction: column;
+  }
+
+  .hero2 {
+    margin-top: 2rem;
+  }
+
+  .hero2 h2 {
+    font-size: 1.5rem;
+  }
+
+  footer .container article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .container {
+    padding-top: 2rem;
+  }
+
+  .heading1,
+  .heading2 {
+    margin-bottom: 2rem;
+  }
+
+  .last-p {
+    padding-bottom: 1rem;
+  }
+}
